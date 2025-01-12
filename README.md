@@ -1,79 +1,140 @@
-# GeoAlpha AI: A New Frontier in Geopolitical Risk Management
+# GeoAlpha Protocol
 
-**Transforming the Future of Investment through Geopolitical Intelligence**
+GeoAlpha Protocol: A Decentralized Platform for Real-Time Geopolitical Risk Management
 
----
-
-## Overview
-GeoAlpha AI leverages advanced AI and blockchain technologies to provide real-time geopolitical risk analysis and predictions. This platform empowers investors, governments, and enterprises with actionable insights to make informed decisions in a volatile world.
+GeoAlpha Protocol combines cutting-edge AI, blockchain technology, and decentralized finance (DeFi) principles to provide real-time insights into geopolitical risks. This repository includes the smart contracts, scripts, and tools required to deploy and manage the protocol.
 
 ---
 
-## Table of Contents
-1. [Cover](1-cover/cover.md)  
-   Introduction to GeoAlpha AI and the expert team behind the project.
-   
-2. [Executive Summary](2-executive-summary/executive-summary.md)  
-   A high-level overview of the project’s purpose, significance, and highlights.
-   
-3. [Problem Definition](3-problem-definition/problem-definition.md)  
-   Identifies the key challenges in geopolitical risk analysis and how GeoAlpha AI addresses them.
-   
-4. [High-Impact Visuals](4-high-impact-visuals/high-impact-visuals.md)  
-   Demonstrates the platform’s visual capabilities, including dynamic maps and dashboards.
-   
-5. [Technical Architecture](5-technical-architecture/technical-architecture.md)  
-   Details the technological components, including AI, the G.A.M.E framework, and blockchain integration.
-   
-6. [Use Cases](6-use-cases/use-cases.md)  
-   Practical applications for investors, enterprises, governments, and NGOs.
-   
-7. [Token Economy](7-token-economy/token-economy.md)  
-   Explanation of the token's utility, circulation model, and economic sustainability.
-   
-8. [Roadmap](8-roadmap/roadmap.md)  
-   Outlines the development phases and key milestones for GeoAlpha AI.
-   
-9. [Legal and Ethical Considerations](9-legal-and-ethical/legal-and-ethical.md)  
-   Addresses data privacy, AI ethics, and regulatory compliance.
-   
-10. [Conclusion](10-conclusion/conclusion.md)  
-    Summarizes GeoAlpha AI’s value proposition and vision for the future.
-    
-11. [References](11-references/references.md)  
-    Citations and resources supporting the project.
+## Features
+- GeoAlpha Token (GAI): ERC-20 token with an initial supply of 1 billion (1,000,000,000) tokens.
+- Staking Mechanism: Enables token holders to earn rewards and unlock premium services.
+- Geopolitical Risk Data Management: Stores and retrieves real-time geopolitical risk information.
+- Governance: Empowers token holders to influence protocol updates and decisions.
 
 ---
 
 ## Folder Structure
-```plaintext
-geoalpha-ai-gitbook/
-├── README.md              # Project overview
-├── SUMMARY.md             # Table of contents for GitBook
-├── 1-cover/               # Cover section
-│   ├── cover.md           # Cover content
-│   └── images/            # Cover-related images
-├── 2-executive-summary/   # Executive summary
-│   ├── executive-summary.md
-├── 3-problem-definition/  # Problem definition
-│   ├── problem-definition.md
-├── 4-high-impact-visuals/ # High-impact visuals
-│   ├── high-impact-visuals.md
-│   └── images/            # Visual-related images
-├── 5-technical-architecture/ # Technical architecture
-│   ├── technical-architecture.md
-├── 6-use-cases/           # Use cases
-│   ├── use-cases.md
-├── 7-token-economy/       # Token economy
-│   ├── token-economy.md
-├── 8-roadmap/             # Roadmap
-│   ├── roadmap.md
-├── 9-legal-and-ethical/   # Legal and ethical considerations
-│   ├── legal-and-ethical.md
-├── 10-conclusion/         # Conclusion
-│   ├── conclusion.md
-├── 11-references/         # References
-│   ├── references.md
-└── assets/global/         # Global assets (e.g., images, icons)
-    ├── logo.png
-    └── favicon.ico
+geoalpha-protocol/
+├── contracts/                     # Smart contract source code
+│   ├── GeoAlphaToken.sol          # ERC-20 token implementation
+│   ├── GeoAlphaStaking.sol        # Staking smart contract
+│   ├── GeoRiskData.sol            # Geopolitical risk data management
+├── scripts/                       # Deployment scripts
+│   ├── deploy.js                  # Script to deploy smart contracts
+├── test/                          # Unit tests for smart contracts
+│   ├── GeoAlphaToken.test.js      # Tests for GeoAlphaToken
+│   ├── GeoAlphaStaking.test.js    # Tests for GeoAlphaStaking
+│   ├── GeoRiskData.test.js        # Tests for GeoRiskData
+├── frontend/                      # Frontend interface (optional)
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── RiskDashboard.js  # Dashboard for risk data visualization
+│   │   │   ├── StakingPanel.js   # Staking functionality UI
+│   │   ├── App.js                # Main application entry point
+├── .env.example                   # Example environment variables file
+├── hardhat.config.js              # Hardhat configuration file
+├── package.json                   # Node.js dependencies
+└── README.md                      # This file
+
+---
+
+## Getting Started
+
+To set up and run the GeoAlpha Protocol, follow these steps:
+
+### Prerequisites
+1. Install [Node.js](https://nodejs.org/) (v16 or higher).
+2. Set up the [Hardhat](https://hardhat.org/) development environment.
+3. Have an Ethereum wallet (e.g., [MetaMask](https://metamask.io/)).
+4. Obtain a Testnet or Mainnet RPC URL.
+
+### Installation
+1. Clone the repository:
+   git clone https://github.com/<username>/geoalpha-protocol.git
+   cd geoalpha-protocol
+
+2. Install dependencies:
+   npm install
+
+3. Create a `.env` file in the root directory based on `.env.example`:
+   PRIVATE_KEY=<your_private_key>
+   RPC_URL=<your_rpc_url>
+
+4. Compile the contracts:
+   npx hardhat compile
+
+5. Deploy the contracts:
+   npx hardhat run scripts/deploy.js --network <network_name>
+
+Example output:
+Deploying contracts with account: 0xYourAccountAddress
+GeoAlpha Token deployed to: 0xTokenContractAddress
+GeoAlpha Staking deployed to: 0xStakingContractAddress
+GeoRisk Data deployed to: 0xRiskDataContractAddress
+
+6. Run unit tests to ensure the contracts are working as expected:
+   npx hardhat test
+
+---
+
+## Frontend Integration
+
+The protocol includes an optional frontend interface to interact with the smart contracts.
+
+1. Navigate to the `frontend` folder:
+   cd frontend
+
+2. Install frontend dependencies:
+   npm install
+
+3. Start the development server:
+   npm start
+
+This will launch a local development server where you can interact with the protocol's dashboard and staking panel.
+
+---
+
+## Smart Contracts Overview
+
+1. GeoAlphaToken.sol:
+   - ERC-20 token for the protocol.
+   - Features: Mintable, Burnable.
+   - Initial Supply: 1,000,000,000 GAI .
+   - Token Symbol: GAI.
+
+2. GeoAlphaStaking.sol:
+   - Staking mechanism allowing users to lock tokens and earn rewards.
+   - Reward Rate: 10% per year.
+   - Features: Stake, Unstake, and Reward Calculation.
+
+3. GeoRiskData.sol:
+   - Manages and retrieves geopolitical risk data.
+   - Features: Add new risks, Retrieve stored risks.
+   - Data Points: Region, Risk Type, Severity, Timestamp.
+
+---
+
+## Contributing
+
+We welcome contributions! Please follow these steps:
+1. Fork the repository.
+2. Create a feature branch:
+   git checkout -b feature/your-feature
+3. Commit your changes:
+   git commit -m "Add your feature"
+4. Push to the branch:
+   git push origin feature/your-feature
+5. Open a pull request.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+---
+
+## Contact
+
+For questions or collaboration, please reach out via the repository's issue tracker or email: team@geoalpha.ai
