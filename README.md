@@ -15,6 +15,7 @@ GeoAlpha Protocol combines cutting-edge AI, blockchain technology, and decentral
 ---
 
 ## Folder Structure
+'''
 geoalpha-protocol/
 ├── contracts/                     # Smart contract source code
 │   ├── GeoAlphaToken.sol          # ERC-20 token implementation
@@ -36,7 +37,7 @@ geoalpha-protocol/
 ├── hardhat.config.js              # Hardhat configuration file
 ├── package.json                   # Node.js dependencies
 └── README.md                      # This file
-
+'''
 ---
 
 ## Getting Started
